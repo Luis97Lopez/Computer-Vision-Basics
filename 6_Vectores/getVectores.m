@@ -8,7 +8,7 @@ function vectors = getVectores(im, f)
   g = imfilter(im, f);
   
   % Obtenemos el valor máximo de nuestra imagen filtrada
-  value = max(max(g));
+  value = max(max(g))
   
   % Obtenemos los puntos máximos en la imagen G.
   [xMax, yMax] = find(g == value);
@@ -23,7 +23,7 @@ function vectors = getVectores(im, f)
   
   figure;
   
-  for i=1: 1
+  for i=1:nVectors
     % Obtenemos el punto 
     vectors(i).point = [yMax(i) - cropSize, xMax(i) - cropSize];
     
